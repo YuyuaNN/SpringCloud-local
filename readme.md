@@ -200,11 +200,7 @@ gateway-admin可动态调整gateway-web的路由策略，测试前请先配置�
 
 如果你觉的有帮助到您，可以请作者喝饮料，这样更有动力，谢谢。
 
-<p align="left">
-  <img width="300" src="https://user-images.githubusercontent.com/3946731/67401177-58eec300-f5e1-11e9-97e6-9ae29e3523e0.jpeg">
-  
-  <img width="300" src="https://user-images.githubusercontent.com/3946731/67401198-60ae6780-f5e1-11e9-8c30-c12bd598011b.jpeg">
-</p>
+
 
 ### 学习交流
 
