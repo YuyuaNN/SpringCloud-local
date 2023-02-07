@@ -174,6 +174,9 @@ gateway-admin可动态调整gateway-web的路由策略，测试前请先配置�
 |  日志管理 | ES + Kibana、Zipkin     |   ✅          |           |
 |  监控告警 | Grafana                 |   ✅          |           |
 
+swagger 地址例如：
+http://localhost:8010/swagger-ui.html
+
 ## 更新日志
 
 **2019-10-18：** 
