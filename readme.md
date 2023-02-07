@@ -249,3 +249,53 @@ EMail：zhoutaoo@foxmail.com
 ## Stargazers over time
  
 [![Stargazers over time](https://starchart.cc/zhoutaoo/SpringCloud.svg)](https://starchart.cc/zhoutaoo/SpringCloud)
+
+
+###########
+常见问题：
+authorization-server项目启动后，使用postman请求获取token，返回登陆页面html或报错页面
+首先请确保他的依赖服务organization启动，再次请仔细核对请求报文，有以下几种可能
+
+1.users或oauth_client_details表中的数据没有初使化
+
+2.请求报文格式不正确，或client账号不正确，请仔细对照文档比对 获取token文档 （https://github.com/zhoutaoo/SpringCloud/blob/master/auth/authorization-server/readme.md）
+
+项目支不支持mysql？
+支持，db目录中ddl下会有mysql的子目录，里面是mysql的ddl脚本，目前默认支持mysql, 但数据库表和数据需要自己手工初使化
+
+auth中全局资源resource新增，修改变化后有动态加载嘛？
+通过接口新增的资源是可以动态加载的，如果你是手工编辑数据库的，需要清除缓存重启authenication-server，organization
+
+jwt token为什么没有持久化到数据库中？
+jwt是自包含的，过期时间等信息都在token中，且有签名，故不需要存，也很安全
+
+admin、test_client的密码是多少？
+请看文档 账号密码及使用 （https://github.com/zhoutaoo/SpringCloud/blob/master/auth/authorization-server/readme.md）
+
+为什么我获取token时老是报401无权限？
+有以下几种可能，请仔细检查
+
+1.users或oauth_client_details表中的数据没有初使化
+
+2.请求报文不正确，请仔细核对文档中的请求http报文
+
+3.账号密码错误，password模式是有两组账号密码的，请仔细核对文档
+
+4.用户没有权限访问请求的url，实体关系 用户-》角色-》资源，检查用户是否对请求的url有权限访问
+
+5.重启authenticatation-server
+
+为什么我的网关转发不到后面的服务？
+请确保数据库中添加了网关路由的配置，即redis中有路由配置，因为gateway-web是从redis中读取配置的。
+
+启动前端项目后，请求报404？
+请确保添加了网关路由的配置，即redis中有路由配置，因为gateway-web是从redis中读取配置的，同上。 先启动gateway-admin成功后再启动gateway-web。
+
+怎么添加网关路由转发的配置？
+可通过postman调接口新增路由配置 新增路由文档 （https://github.com/zhoutaoo/SpringCloud/tree/master/gateway/gateway-admin#使用指南）
+
+这个项目有没有管理界面？
+管理界面 （https://github.com/zhoutaoo/SpringCloud-Admin）
+
+
+
