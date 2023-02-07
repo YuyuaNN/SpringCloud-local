@@ -177,6 +177,25 @@ gateway-admin可动态调整gateway-web的路由策略，测试前请先配置�
 swagger 地址例如：
 http://localhost:8010/swagger-ui.html
 
+通过swagger手动添加测试账号：
+请求url：
+http://localhost:8010/swagger-ui.html#/user-controller/addUsingPOST_5
+UserController.add() 接口
+
+请求body：
+{
+"description": "测试用户",
+"enabled": true,
+"mobile": "13999999999",
+"name": "yuyuan",
+"password": "123456",
+"roleIds": [
+"ADMIN"
+],
+"username": "yuyuan"
+}
+
+
 ## 更新日志
 
 **2019-10-18：** 
