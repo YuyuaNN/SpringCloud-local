@@ -174,7 +174,7 @@ Cache-Control: no-cache
 }
 ```
 
-#### 刷新access_token
+#### 5、 刷新access_token
 
 用途：使用refresh_token更新access_token
 
@@ -217,7 +217,8 @@ Host: localhost:8000
 Cache-Control: no-cache
 Content-Type: application/x-www-form-urlencoded
 
-username=15619841xxxx&password=123456&client_id=test_client&client_secret=test_secret&scope=read&grant_type=mobile
+queryString params
+?username=15619841xxxx&password=123456&client_id=test_client&client_secret=test_secret&scope=read&grant_type=mobile
 ```
 响应报文
 
