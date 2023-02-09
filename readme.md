@@ -300,5 +300,6 @@ admin、test_client的密码是多少？
 
 #############
 starred from
-https://github.com/zhoutaoo/SpringCloud 
+https://github.com/zhoutaoo/SpringCloud
+git clone https://github.com/zhoutaoo/SpringCloud.git
 
