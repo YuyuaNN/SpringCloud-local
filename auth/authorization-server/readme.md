@@ -59,7 +59,7 @@ password: `password`
 
 ### 接口测试
 
-#### 密码模式，grant_type=password
+#### 1、 密码模式，grant_type=password
 
 用途：可用于用户通过前端应用登陆、使用应用，如app，web等终端
 
@@ -92,7 +92,7 @@ username=zhoutaoo&password=password
 }
 ```
 
-#### 客户端模式，grant_type=client_credentials
+#### 2、 客户端模式，grant_type=client_credentials
 
 用途：可用于接口开放给第三方商户，商户申请client_id和密码，即可调用授权的接口
 
@@ -120,7 +120,7 @@ Cache-Control: no-cache
 }
 ```
 
-#### 授权码模式，grant_type=authorization_code
+#### 3、 授权码模式，grant_type=authorization_code
 
 用途：可用开放平台账户给第三方商户，商户申请client_id和密码请求用户授权，用户授权商户即可调用平台授权的接口获取数据，类似微信、支付宝授权登陆
 
@@ -128,7 +128,7 @@ Cache-Control: no-cache
 
 1. 用户跳转至平台
 
-`http://host1:8000/oauth/authorize?response_type=code&client_id=test_client&scope=read&state=test&redirect_uri=http://baidu.com`
+`http://localhost:8000/oauth/authorize?response_type=code&client_id=test_client&scope=read&state=test&redirect_uri=http://baidu.com`
 
 ```
 client_id： 商户申请的client_id(oauth_client_details表中的记录)
@@ -184,7 +184,7 @@ Cache-Control: no-cache
 
 ```
 POST /oauth/token?scope=read&amp;grant_type=refresh_token&amp;refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiXSwib3JnYW5pemF0aW9uIjoiYWRtaW4iLCJhdGkiOiJlODA5MDRkYi1mMDBkLTRkNDAtOGFlNS0xMWY2OTVlMzZjMTEiLCJleHAiOjE1MzQ1MjQzMTQsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImp0aSI6Ijk0OGUxZTYxLTBkOTUtNGYzMC04YWNlLWFmNDcyNjU2ZWNiNCIsImNsaWVudF9pZCI6InRlc3RfY2xpZW50In0.XrvwAi14NTJXm029CGFD3BsPgZdYQ7u1nszYlf42Eo8 HTTP/1.1
-Host: host1:8000
+Host: localhost:8000
 Authorization: Basic dGVzdF9jbGllbnQ6dGVzdF9zZWNyZXQ=
 Cache-Control: no-cache
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -203,7 +203,7 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0g
 }
 ```
 
-#### 自定义手机验证码模式，grant_type=mobile
+#### 4、 自定义手机验证码模式，grant_type=mobile
 
 用途：可用于用户通过手机和验证码在前端应用登陆、使用应用
 
