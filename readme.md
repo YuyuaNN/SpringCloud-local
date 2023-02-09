@@ -298,4 +298,7 @@ admin、test_client的密码是多少？
 管理界面 （https://github.com/zhoutaoo/SpringCloud-Admin）
 
 
+#############
+starred from
+https://github.com/zhoutaoo/SpringCloud 
 
